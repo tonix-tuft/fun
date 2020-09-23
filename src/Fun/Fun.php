@@ -39,8 +39,8 @@ final class Fun {
      * @return mixed The return value of the callable or function, or the instance/object if `$callableOrInstantiableClass` is a class.
      */
     public static function invoke($callableOrInstantiableClass, $params = []) {
-        return class_exists($callableOrInstantiableClass) &&
-            !is_callable($callableOrInstantiableClass)
+        return !is_callable($callableOrInstantiableClass) &&
+            class_exists($callableOrInstantiableClass)
             ? new $callableOrInstantiableClass(...$params)
             : $callableOrInstantiableClass(...$params);
     }
