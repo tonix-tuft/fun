@@ -29,6 +29,8 @@ namespace Fun;
 
 /**
  * Final class containing only static methods as PHP does not autoload functions.
+ *
+ * @author Anton Bagdatyev (Tonix) <antonytuft@gmail.com>
  */
 final class Fun {
     /**
